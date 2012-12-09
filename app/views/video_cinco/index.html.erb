@@ -1,0 +1,29 @@
+<h1>VideoCinco#index</h1>
+<h2>arreglos</h2>
+<hr/>
+<%
+a = (1..3).to_a;
+%>
+el largo del array es <%= a.length();%>
+<br />
+<% 
+b = (3..10).to_a;
+
+c = a + b;
+c << " valor final";
+
+%>
+el largo del array c es: <%= c.length()%>
+<br />print c es: <%= c%>
+<ul>
+<%
+c.each do |item|
+	%><li><%=item%></li><%
+end
+%>
+</ul>
+<hr />
+<h2>Recorriendo arreglo por el ciclo &acute;for&acute;</h2>
+<%for i in c do%>
+	<%= i%><br />
+<%end%>
